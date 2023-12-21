@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://sbm1oyear8qo"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_0syko"]
+[ext_resource type="PackedScene" uid="uid://d2kgac3f7dwfo" path="res://player.tscn" id="1_m705o"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_81oem"]
+size = Vector3(60, 2, 60)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2sx77"]
+size = Vector3(60, 2, 60)
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_0syko")
+
+[node name="Ground" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("BoxShape3D_81oem")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("BoxMesh_2sx77")
+
+[node name="Player" parent="." instance=ExtResource("1_m705o")]
