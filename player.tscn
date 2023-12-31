@@ -5,6 +5,7 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_8wli1"]
 
 [node name="Player" type="CharacterBody3D"]
+collision_mask = 257
 script = ExtResource("1_nao44")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
