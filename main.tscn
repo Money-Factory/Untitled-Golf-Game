@@ -1,12 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://sbm1oyear8qo"]
+[gd_scene load_steps=7 format=3 uid="uid://sbm1oyear8qo"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_0syko"]
 [ext_resource type="PackedScene" uid="uid://d2kgac3f7dwfo" path="res://player.tscn" id="1_m705o"]
+[ext_resource type="PackedScene" uid="uid://c4pgq5hsanolt" path="res://base_golf_ball.tscn" id="3_tr7ho"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_81oem"]
 size = Vector3(60, 2, 60)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j5o0c"]
+albedo_color = Color(0, 0.54902, 0, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_2sx77"]
+material = SubResource("StandardMaterial3D_j5o0c")
 size = Vector3(60, 2, 60)
 
 [node name="Main" type="Node3D"]
@@ -22,3 +27,10 @@ shape = SubResource("BoxShape3D_81oem")
 mesh = SubResource("BoxMesh_2sx77")
 
 [node name="Player" parent="." instance=ExtResource("1_m705o")]
+
+[node name="BaseGolfBall" parent="." instance=ExtResource("3_tr7ho")]
+transform = Transform3D(0.042, 0, 0, 0, 0.042, 0, 0, 0, 0.042, 0, 0.0235657, 0.671838)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.631258, 0.775573, 0, -0.775573, -0.631258, 0, 7.19724, 0)
+shadow_enabled = true
