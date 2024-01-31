@@ -4,10 +4,10 @@
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_g7mnf"]
 
-[node name="BaseGolfBall" type="CharacterBody3D"]
-transform = Transform3D(0.042, 0, 0, 0, 0.042, 0, 0, 0, 0.042, 0, 0, 0)
+[node name="BaseGolfBall" type="RigidBody3D"]
 
 [node name="Pivot" type="Node3D" parent="."]
+transform = Transform3D(0.042, 0, 0, 0, 0.042, 0, 0, 0, 0.042, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot"]
 mesh = SubResource("SphereMesh_abtbo")
