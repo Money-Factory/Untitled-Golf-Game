@@ -29,7 +29,7 @@ mesh = SubResource("BoxMesh_2sx77")
 [node name="Player" parent="." instance=ExtResource("1_m705o")]
 
 [node name="BaseGolfBall" parent="." instance=ExtResource("3_tr7ho")]
-transform = Transform3D(0.042, 0, 0, 0, 0.042, 0, 0, 0, 0.042, 0, 0.0235657, 0.671838)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0235657, 0.671838)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -0.631258, 0.775573, 0, -0.775573, -0.631258, 0, 7.19724, 0)
